@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      Cân nặng của bạn
+    <input type="number" id="input1">
+      Chiều cao của bạn
+    <input type="number" id="input2">
+    <button onclick="resultBMI()">BMI</button>
+    <p id="output"></p>
+      <script>
+        function resultBMI() {
+          let x = +document.getElementById('input1').value;
+          let y = +document.getElementById('input2').value;
+          let bmi = x/(y*y);
+          if(bmi <18) {
+              document.getElementById('output').innerHTML = 'Underweight';
+          } else if (bmi < 25.0) {
+              document.getElementById('output').innerHTML = 'Normal';
+          } else if (bmi < 30.0){
+              document.getElementById('output').innerHTML = 'Overweight';
+          }else {
+              document.getElementById('output').innerHTML = 'Obese';
+          }
+        }
+      </script>
+</body>
+</html>
